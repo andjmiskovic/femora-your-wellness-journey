@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ["'Cormorant Garamond'", "serif"],
-        ui: ["'Inter'", "system-ui", "sans-serif"],
+        display: ["'Playfair Display'", "serif"],
+        ui: ["'Outfit'", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -64,9 +64,15 @@ export default {
         femora: {
           rose: "hsl(var(--femora-rose))",
           "rose-deep": "hsl(var(--femora-rose-deep))",
+          "rose-light": "hsl(var(--femora-rose-light))",
           sage: "hsl(var(--femora-sage))",
+          "sage-light": "hsl(var(--femora-sage-light))",
           nude: "hsl(var(--femora-nude))",
           ceramic: "hsl(var(--femora-ceramic))",
+          violet: "hsl(var(--femora-violet))",
+          "violet-light": "hsl(var(--femora-violet-light))",
+          peach: "hsl(var(--femora-peach))",
+          "peach-light": "hsl(var(--femora-peach-light))",
         },
       },
       borderRadius: {
@@ -84,16 +90,25 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        "bloom": {
-          "0%": { opacity: "0" },
+        "float": {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-8px)" },
+        },
+        "pulse-soft": {
+          "0%, 100%": { opacity: "0.6" },
           "50%": { opacity: "1" },
-          "100%": { opacity: "0" },
+        },
+        "shimmer": {
+          "0%": { backgroundPosition: "-200% 0" },
+          "100%": { backgroundPosition: "200% 0" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "bloom": "bloom 3s ease-in-out",
+        "float": "float 4s ease-in-out infinite",
+        "pulse-soft": "pulse-soft 3s ease-in-out infinite",
+        "shimmer": "shimmer 2s linear infinite",
       },
     },
   },
