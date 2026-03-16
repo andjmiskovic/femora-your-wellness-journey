@@ -281,9 +281,9 @@ export default function Landing() {
             transition={transition}
           >
             <img
-              src={appPreviewScreens}
-              alt="Femora app screens showing cycle calendar, dashboard, and symptom tracking"
-              className="w-full max-w-4xl mx-auto"
+              src={appScreensPreview}
+              alt="Femora app screens showing cycle calendar, dashboard, and AI chat"
+              className="w-full max-w-4xl mx-auto rounded-2xl shadow-elevated"
             />
           </motion.div>
         </div>
