@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import { useAppState } from "@/context/AppContext";
 import DateStrip from "@/components/DateStrip";
 import CycleHeroCard from "@/components/CycleHeroCard";
 import Timeline from "@/components/Timeline";
 import DailyLog from "@/components/DailyLog";
-import { ArrowLeft, Settings, Sparkles } from "lucide-react";
+import { Settings, Sparkles } from "lucide-react";
 
 function getPhaseInfo(day: number, cycleLength: number) {
   const ovulation = Math.round(cycleLength * 0.5);
