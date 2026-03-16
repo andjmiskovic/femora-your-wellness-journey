@@ -251,7 +251,7 @@ export default function Landing() {
       </section>
 
       {/* APP PREVIEW SECTION */}
-      <section className="py-20 md:py-28 px-6 bg-secondary/30">
+      <section className="py-12 md:py-16 px-6 bg-secondary/30">
         <div className="max-w-6xl mx-auto text-center">
           <motion.div
             variants={stagger}
