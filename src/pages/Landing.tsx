@@ -322,9 +322,9 @@ export default function Landing() {
               transition={transition}
             >
               <img
-                src={aiVisualization}
-                alt="AI data visualization showing health pattern analysis"
-                className="w-full max-w-md mx-auto"
+                src={aiWoman}
+                alt="Woman using AI-powered health insights on tablet"
+                className="w-full max-w-md mx-auto rounded-3xl shadow-elevated object-cover aspect-square"
               />
             </motion.div>
           </div>
