@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { useAppState } from "@/context/AppContext";
-import { ArrowLeft, Settings, Baby, CalendarCheck, Stethoscope, Sparkles, MessageCircle } from "lucide-react";
+import { Settings, Baby, CalendarCheck, Stethoscope, Sparkles, MessageCircle } from "lucide-react";
 
 const transition = { type: "spring" as const, stiffness: 300, damping: 28 };
 const container = {
@@ -14,7 +13,6 @@ const item = {
 };
 
 export default function PregnancyDashboard() {
-  const { setMode } = useAppState();
   const navigate = useNavigate();
   const currentWeek = 12;
 
@@ -32,11 +30,8 @@ export default function PregnancyDashboard() {
       >
         {/* Header */}
         <motion.div variants={item} className="flex items-center justify-between mb-5">
-          <button onClick={() => setMode(null)} className="p-2 -ml-2 rounded-xl text-muted-foreground hover:text-foreground hover:bg-secondary transition-all">
-            <ArrowLeft className="w-5 h-5" strokeWidth={1.5} />
-          </button>
           <h1 className="font-display text-xl font-medium text-foreground">Femora</h1>
-          <button className="p-2 -mr-2 rounded-xl text-muted-foreground hover:text-foreground hover:bg-secondary transition-all">
+          <button onClick={() => navigate("/settings")} className="p-2 -mr-2 rounded-xl text-muted-foreground hover:text-foreground hover:bg-secondary transition-all">
             <Settings className="w-5 h-5" strokeWidth={1.5} />
           </button>
         </motion.div>

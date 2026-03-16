@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import { useAppState } from "@/context/AppContext";
 import DateStrip from "@/components/DateStrip";
 import CycleHeroCard from "@/components/CycleHeroCard";
 import Timeline from "@/components/Timeline";
 import DailyLog from "@/components/DailyLog";
-import { ArrowLeft, Settings, Sparkles } from "lucide-react";
+import { Settings, Sparkles } from "lucide-react";
 
 function getPhaseInfo(day: number, cycleLength: number) {
   const ovulation = Math.round(cycleLength * 0.5);
@@ -28,7 +29,8 @@ const item = {
 };
 
 export default function CycleDashboard() {
-  const { currentCycleDay, cycleLength, setMode } = useAppState();
+  const { currentCycleDay, cycleLength } = useAppState();
+  const navigate = useNavigate();
   const { phase, label } = getPhaseInfo(currentCycleDay, cycleLength);
   const daysUntilPeriod = cycleLength - currentCycleDay;
 
@@ -63,11 +65,8 @@ export default function CycleDashboard() {
       >
         {/* Header */}
         <motion.div variants={item} className="flex items-center justify-between mb-5">
-          <button onClick={() => setMode(null)} className="p-2 -ml-2 rounded-xl text-muted-foreground hover:text-foreground hover:bg-secondary transition-all">
-            <ArrowLeft className="w-5 h-5" strokeWidth={1.5} />
-          </button>
           <h1 className="font-display text-xl font-medium text-foreground">Femora</h1>
-          <button className="p-2 -mr-2 rounded-xl text-muted-foreground hover:text-foreground hover:bg-secondary transition-all">
+          <button onClick={() => navigate("/settings")} className="p-2 -mr-2 rounded-xl text-muted-foreground hover:text-foreground hover:bg-secondary transition-all">
             <Settings className="w-5 h-5" strokeWidth={1.5} />
           </button>
         </motion.div>

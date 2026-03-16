@@ -8,6 +8,10 @@ interface Profile {
   display_name: string | null;
   avatar_url: string | null;
   date_of_birth: string | null;
+  tracking_mode: string | null;
+  cycle_length: number | null;
+  onboarding_completed: boolean;
+  period_start_date: string | null;
 }
 
 interface AuthState {
@@ -38,7 +42,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       .select("*")
       .eq("user_id", userId)
       .single();
-    setProfile(data);
+    setProfile(data as Profile | null);
   };
 
   const refreshProfile = async () => {
@@ -107,7 +111,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     if (!user) return { error: new Error("Not authenticated") };
     const { error } = await supabase
       .from("profiles")
-      .update(updates)
+      .update(updates as any)
       .eq("user_id", user.id);
     if (!error) await fetchProfile(user.id);
     return { error };
