@@ -14,6 +14,8 @@ import Settings from "./pages/Settings.tsx";
 import Profile from "./pages/Profile.tsx";
 import CalendarPage from "./pages/CalendarPage.tsx";
 import LogPage from "./pages/LogPage.tsx";
+import AppointmentsPage from "./pages/AppointmentsPage.tsx";
+import AiChatPage from "./pages/AiChatPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
