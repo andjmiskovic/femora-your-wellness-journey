@@ -252,13 +252,11 @@ export default function CalendarPage() {
                   `}
                 >
                   <span className="leading-none">{day}</span>
-                  {/* Phase dot */}
+                  {/* Phase dot - always visible */}
                   <div className="flex items-center gap-0.5 mt-0.5">
-                    {type !== "none" && !isSelected && (
-                      <span className={`w-1.5 h-1.5 rounded-full ${dotColors[type]}`} />
-                    )}
-                    {hasNote && !isSelected && (
-                      <span className="w-1.5 h-1.5 rounded-full bg-foreground/30" />
+                    <span className={`w-1.5 h-1.5 rounded-full ${isSelected ? dotColorsSelected[type] : dotColors[type]}`} />
+                    {hasNote && (
+                      <span className={`w-1.5 h-1.5 rounded-full ${isSelected ? "bg-primary-foreground/60" : "bg-foreground/30"}`} />
                     )}
                   </div>
                 </button>
