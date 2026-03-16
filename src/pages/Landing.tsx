@@ -405,7 +405,7 @@ export default function Landing() {
       </section>
 
       {/* FINAL CTA SECTION */}
-      <section className="py-20 md:py-28 px-6 bg-gradient-to-br from-primary/5 via-femora-violet-light/30 to-femora-peach-light/20">
+      <section className="py-12 md:py-16 px-6 bg-gradient-to-br from-primary/5 via-femora-violet-light/30 to-femora-peach-light/20">
         <div className="max-w-3xl mx-auto text-center">
           <motion.div
             variants={stagger}
