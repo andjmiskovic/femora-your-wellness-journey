@@ -29,7 +29,8 @@ const item = {
 };
 
 export default function CycleDashboard() {
-  const { currentCycleDay, cycleLength, setMode } = useAppState();
+  const { currentCycleDay, cycleLength } = useAppState();
+  const navigate = useNavigate();
   const { phase, label } = getPhaseInfo(currentCycleDay, cycleLength);
   const daysUntilPeriod = cycleLength - currentCycleDay;
 
