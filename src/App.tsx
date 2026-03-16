@@ -14,6 +14,8 @@ import Settings from "./pages/Settings.tsx";
 import Profile from "./pages/Profile.tsx";
 import CalendarPage from "./pages/CalendarPage.tsx";
 import LogPage from "./pages/LogPage.tsx";
+import AppointmentsPage from "./pages/AppointmentsPage.tsx";
+import AiChatPage from "./pages/AiChatPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -69,6 +71,8 @@ const App = () => (
               <Route path="/settings" element={<ProtectedRoute><Settings /></ProtectedRoute>} />
               <Route path="/calendar" element={<ProtectedRoute><AppLayout><CalendarPage /></AppLayout></ProtectedRoute>} />
               <Route path="/log" element={<ProtectedRoute><AppLayout><LogPage /></AppLayout></ProtectedRoute>} />
+              <Route path="/appointments" element={<ProtectedRoute><AppLayout><AppointmentsPage /></AppLayout></ProtectedRoute>} />
+              <Route path="/ai-chat" element={<ProtectedRoute><AppLayout><AiChatPage /></AppLayout></ProtectedRoute>} />
               <Route path="/" element={<ProtectedRoute><AppLayout><Index /></AppLayout></ProtectedRoute>} />
               <Route path="*" element={<NotFound />} />
             </Routes>

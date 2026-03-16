@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import { useAppState } from "@/context/AppContext";
-import { ArrowLeft, Settings, Baby, CalendarCheck, Stethoscope, Sparkles } from "lucide-react";
+import { ArrowLeft, Settings, Baby, CalendarCheck, Stethoscope, Sparkles, MessageCircle } from "lucide-react";
 
 const transition = { type: "spring" as const, stiffness: 300, damping: 28 };
 const container = {
@@ -14,6 +15,7 @@ const item = {
 
 export default function PregnancyDashboard() {
   const { setMode } = useAppState();
+  const navigate = useNavigate();
   const currentWeek = 12;
 
   const trimester = currentWeek <= 12 ? "First" : currentWeek <= 27 ? "Second" : "Third";
@@ -117,22 +119,27 @@ export default function PregnancyDashboard() {
         </motion.div>
 
         {/* Quick Actions */}
-        <motion.div variants={item} className="grid grid-cols-2 gap-3">
-          <button className="bg-card rounded-2xl p-5 shadow-card border border-border/40 text-left
+        <motion.div variants={item} className="grid grid-cols-3 gap-3">
+          <button onClick={() => navigate("/appointments")} className="bg-card rounded-2xl p-4 shadow-card border border-border/40 text-left
                              hover:border-primary/30 transition-all group">
             <div className="w-10 h-10 rounded-xl bg-femora-peach-light flex items-center justify-center mb-3 group-hover:scale-105 transition-transform">
               <CalendarCheck className="w-5 h-5 text-femora-peach" strokeWidth={1.5} />
             </div>
-            <p className="font-ui text-sm font-medium text-foreground">Appointments</p>
-            <p className="font-ui text-[11px] text-muted-foreground font-light mt-0.5">Next: Ultrasound</p>
+            <p className="font-ui text-xs font-medium text-foreground">Appointments</p>
           </button>
-          <button className="bg-card rounded-2xl p-5 shadow-card border border-border/40 text-left
+          <button onClick={() => navigate("/log")} className="bg-card rounded-2xl p-4 shadow-card border border-border/40 text-left
                              hover:border-primary/30 transition-all group">
             <div className="w-10 h-10 rounded-xl bg-femora-violet-light flex items-center justify-center mb-3 group-hover:scale-105 transition-transform">
               <Stethoscope className="w-5 h-5 text-femora-violet" strokeWidth={1.5} />
             </div>
-            <p className="font-ui text-sm font-medium text-foreground">Symptom Log</p>
-            <p className="font-ui text-[11px] text-muted-foreground font-light mt-0.5">Track daily</p>
+            <p className="font-ui text-xs font-medium text-foreground">Symptom Log</p>
+          </button>
+          <button onClick={() => navigate("/ai-chat")} className="bg-card rounded-2xl p-4 shadow-card border border-border/40 text-left
+                             hover:border-primary/30 transition-all group">
+            <div className="w-10 h-10 rounded-xl bg-femora-sage-light flex items-center justify-center mb-3 group-hover:scale-105 transition-transform">
+              <MessageCircle className="w-5 h-5 text-femora-sage" strokeWidth={1.5} />
+            </div>
+            <p className="font-ui text-xs font-medium text-foreground">AI Chat</p>
           </button>
         </motion.div>
       </motion.div>
