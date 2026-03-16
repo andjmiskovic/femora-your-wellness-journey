@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import { useAppState } from "@/context/AppContext";
-import { ArrowLeft, Settings, Baby, CalendarCheck, Stethoscope, Sparkles } from "lucide-react";
+import { ArrowLeft, Settings, Baby, CalendarCheck, Stethoscope, Sparkles, MessageCircle } from "lucide-react";
 
 const transition = { type: "spring" as const, stiffness: 300, damping: 28 };
 const container = {
