@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useAppState } from "@/context/AppContext";
-import { ChevronLeft, ChevronRight, Sparkles, X, Droplets, DropletOff, StickyNote } from "lucide-react";
+import { ChevronLeft, ChevronRight, Sparkles, X, Droplets, Droplet, StickyNote } from "lucide-react";
 import { Textarea } from "@/components/ui/textarea";
 
 const DAYS = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
