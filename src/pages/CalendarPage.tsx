@@ -63,7 +63,15 @@ const dotColors: Record<DayType, string> = {
   fertile: "bg-accent/60",
   ovulation: "bg-accent",
   luteal: "bg-secondary-foreground/30",
-  none: "",
+  none: "bg-border",
+};
+
+const dotColorsSelected: Record<DayType, string> = {
+  period: "bg-primary-foreground",
+  fertile: "bg-primary-foreground/70",
+  ovulation: "bg-primary-foreground",
+  luteal: "bg-primary-foreground/50",
+  none: "bg-primary-foreground/30",
 };
 
 const phaseLabels: Record<DayType, string> = {
