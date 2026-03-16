@@ -13,10 +13,10 @@ import {
   Twitter,
   Facebook,
 } from "lucide-react";
-import heroPhone from "@/assets/hero-phone-mockup.png";
-import wellnessIllustration from "@/assets/wellness-illustration.png";
-import aiVisualization from "@/assets/ai-visualization.png";
-import appPreviewScreens from "@/assets/app-preview-screens.png";
+import heroWoman from "@/assets/hero-woman.jpg";
+import wellnessWoman from "@/assets/wellness-woman.jpg";
+import aiWoman from "@/assets/ai-woman.jpg";
+import appScreensPreview from "@/assets/app-screens-preview.png";
 import appStoreBadges from "@/assets/app-store-badges.png";
 
 const transition = { type: "spring" as const, stiffness: 200, damping: 24 };
@@ -106,7 +106,7 @@ export default function Landing() {
       </nav>
 
       {/* HERO SECTION */}
-      <section className="pt-28 pb-16 md:pt-36 md:pb-24 px-6">
+      <section className="pt-28 pb-10 md:pt-36 md:pb-16 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 md:gap-8 items-center">
             <motion.div variants={stagger} initial="hidden" animate="show">
@@ -152,9 +152,9 @@ export default function Landing() {
               className="flex justify-center"
             >
               <img
-                src={heroPhone}
-                alt="Femora app dashboard on a smartphone"
-                className="w-72 md:w-80 lg:w-96 drop-shadow-2xl"
+                src={heroWoman}
+                alt="Woman using Femora app on her phone"
+                className="w-full max-w-sm rounded-3xl shadow-elevated object-cover aspect-[3/4]"
               />
             </motion.div>
           </div>
@@ -162,7 +162,7 @@ export default function Landing() {
       </section>
 
       {/* VALUE SECTION */}
-      <section id="value-section" className="py-20 md:py-28 px-6 bg-secondary/30">
+      <section id="value-section" className="py-12 md:py-16 px-6 bg-secondary/30">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
             <motion.div
@@ -172,9 +172,9 @@ export default function Landing() {
               transition={transition}
             >
               <img
-                src={wellnessIllustration}
-                alt="Abstract female wellness illustration"
-                className="w-full max-w-sm mx-auto"
+                src={wellnessWoman}
+                alt="Woman practicing wellness and self-care"
+                className="w-full max-w-sm mx-auto rounded-3xl shadow-elevated object-cover aspect-square"
               />
             </motion.div>
             <motion.div
@@ -205,7 +205,7 @@ export default function Landing() {
       </section>
 
       {/* FEATURES SECTION */}
-      <section id="features" className="py-20 md:py-28 px-6">
+      <section id="features" className="py-12 md:py-16 px-6">
         <div className="max-w-6xl mx-auto">
           <motion.div
             className="text-center mb-16"
@@ -251,7 +251,7 @@ export default function Landing() {
       </section>
 
       {/* APP PREVIEW SECTION */}
-      <section className="py-20 md:py-28 px-6 bg-secondary/30">
+      <section className="py-12 md:py-16 px-6 bg-secondary/30">
         <div className="max-w-6xl mx-auto text-center">
           <motion.div
             variants={stagger}
@@ -281,16 +281,16 @@ export default function Landing() {
             transition={transition}
           >
             <img
-              src={appPreviewScreens}
-              alt="Femora app screens showing cycle calendar, dashboard, and symptom tracking"
-              className="w-full max-w-4xl mx-auto"
+              src={appScreensPreview}
+              alt="Femora app screens showing cycle calendar, dashboard, and AI chat"
+              className="w-full max-w-4xl mx-auto rounded-2xl shadow-elevated"
             />
           </motion.div>
         </div>
       </section>
 
       {/* AI SECTION */}
-      <section id="ai-section" className="py-20 md:py-28 px-6">
+      <section id="ai-section" className="py-12 md:py-16 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
             <motion.div
@@ -322,9 +322,9 @@ export default function Landing() {
               transition={transition}
             >
               <img
-                src={aiVisualization}
-                alt="AI data visualization showing health pattern analysis"
-                className="w-full max-w-md mx-auto"
+                src={aiWoman}
+                alt="Woman using AI-powered health insights on tablet"
+                className="w-full max-w-md mx-auto rounded-3xl shadow-elevated object-cover aspect-square"
               />
             </motion.div>
           </div>
@@ -332,7 +332,7 @@ export default function Landing() {
       </section>
 
       {/* PRIVACY SECTION */}
-      <section id="privacy" className="py-20 md:py-28 px-6 bg-secondary/30">
+      <section id="privacy" className="py-12 md:py-16 px-6 bg-secondary/30">
         <div className="max-w-3xl mx-auto text-center">
           <motion.div
             variants={stagger}
@@ -363,7 +363,7 @@ export default function Landing() {
       </section>
 
       {/* TESTIMONIALS SECTION */}
-      <section className="py-20 md:py-28 px-6">
+      <section className="py-12 md:py-16 px-6">
         <div className="max-w-6xl mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -405,7 +405,7 @@ export default function Landing() {
       </section>
 
       {/* FINAL CTA SECTION */}
-      <section className="py-20 md:py-28 px-6 bg-gradient-to-br from-primary/5 via-femora-violet-light/30 to-femora-peach-light/20">
+      <section className="py-12 md:py-16 px-6 bg-gradient-to-br from-primary/5 via-femora-violet-light/30 to-femora-peach-light/20">
         <div className="max-w-3xl mx-auto text-center">
           <motion.div
             variants={stagger}
