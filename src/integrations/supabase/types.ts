@@ -57,27 +57,39 @@ export type Database = {
         Row: {
           avatar_url: string | null
           created_at: string
+          cycle_length: number | null
           date_of_birth: string | null
           display_name: string | null
           id: string
+          onboarding_completed: boolean | null
+          period_start_date: string | null
+          tracking_mode: string | null
           updated_at: string
           user_id: string
         }
         Insert: {
           avatar_url?: string | null
           created_at?: string
+          cycle_length?: number | null
           date_of_birth?: string | null
           display_name?: string | null
           id?: string
+          onboarding_completed?: boolean | null
+          period_start_date?: string | null
+          tracking_mode?: string | null
           updated_at?: string
           user_id: string
         }
         Update: {
           avatar_url?: string | null
           created_at?: string
+          cycle_length?: number | null
           date_of_birth?: string | null
           display_name?: string | null
           id?: string
+          onboarding_completed?: boolean | null
+          period_start_date?: string | null
+          tracking_mode?: string | null
           updated_at?: string
           user_id?: string
         }
