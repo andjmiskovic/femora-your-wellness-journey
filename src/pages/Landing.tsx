@@ -13,10 +13,10 @@ import {
   Twitter,
   Facebook,
 } from "lucide-react";
-import heroPhone from "@/assets/hero-phone-mockup.png";
-import wellnessIllustration from "@/assets/wellness-illustration.png";
-import aiVisualization from "@/assets/ai-visualization.png";
-import appPreviewScreens from "@/assets/app-preview-screens.png";
+import heroWoman from "@/assets/hero-woman.jpg";
+import wellnessWoman from "@/assets/wellness-woman.jpg";
+import aiWoman from "@/assets/ai-woman.jpg";
+import appScreensPreview from "@/assets/app-screens-preview.png";
 import appStoreBadges from "@/assets/app-store-badges.png";
 
 const transition = { type: "spring" as const, stiffness: 200, damping: 24 };
