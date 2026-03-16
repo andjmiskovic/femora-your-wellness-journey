@@ -17,7 +17,8 @@ const item = {
 };
 
 export default function ConceiveDashboard() {
-  const { currentCycleDay, cycleLength, setMode } = useAppState();
+  const { currentCycleDay, cycleLength } = useAppState();
+  const navigate = useNavigate();
 
   const ovulationDay = Math.round(cycleLength * 0.5);
   const fertileStart = ovulationDay - 4;
