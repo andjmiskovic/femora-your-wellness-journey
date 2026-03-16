@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useAppState, AppMode } from "@/context/AppContext";
 import { Heart, Baby, CalendarHeart } from "lucide-react";
 
-const transition = { type: "spring", stiffness: 260, damping: 30 };
+const transition = { type: "spring" as const, stiffness: 260, damping: 30 };
 
 const modes = [
   {

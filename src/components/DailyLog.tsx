@@ -45,7 +45,7 @@ const symptoms = [
   { key: "bleeding", label: "Flow", icon: "💧" },
 ];
 
-const transition = { type: "spring", stiffness: 260, damping: 30 };
+const transition = { type: "spring" as const, stiffness: 260, damping: 30 };
 
 export default function DailyLog() {
   const [values, setValues] = useState<Record<string, number>>(

@@ -7,7 +7,7 @@ interface CycleRingProps {
   phaseLabel: string;
 }
 
-const transition = { type: "spring", stiffness: 260, damping: 30 };
+const transition = { type: "spring" as const, stiffness: 260, damping: 30 };
 
 export default function CycleRing({ currentDay, cycleLength, phase, phaseLabel }: CycleRingProps) {
   const progress = currentDay / cycleLength;

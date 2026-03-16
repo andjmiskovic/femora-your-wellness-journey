@@ -4,7 +4,7 @@ import CycleRing from "@/components/CycleRing";
 import DailyLog from "@/components/DailyLog";
 import { ArrowLeft, Settings, Heart, Sparkles, Bell } from "lucide-react";
 
-const transition = { type: "spring", stiffness: 260, damping: 30 };
+const transition = { type: "spring" as const, stiffness: 260, damping: 30 };
 const container = {
   hidden: { opacity: 0 },
   show: { opacity: 1, transition: { staggerChildren: 0.08 } },
