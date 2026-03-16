@@ -338,7 +338,7 @@ export default function CalendarPage() {
                     onClick={handleMarkPeriodEnd}
                     className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-secondary text-secondary-foreground font-ui text-sm font-medium hover:bg-secondary/80 transition-all active:scale-[0.97]"
                   >
-                    <DropletOff className="w-4 h-4" strokeWidth={1.5} />
+                    <Droplet className="w-4 h-4" strokeWidth={1.5} />
                     Period Ended
                   </button>
                 </div>
