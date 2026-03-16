@@ -152,9 +152,9 @@ export default function Landing() {
               className="flex justify-center"
             >
               <img
-                src={heroPhone}
-                alt="Femora app dashboard on a smartphone"
-                className="w-72 md:w-80 lg:w-96 drop-shadow-2xl"
+                src={heroWoman}
+                alt="Woman using Femora app on her phone"
+                className="w-full max-w-sm rounded-3xl shadow-elevated object-cover aspect-[3/4]"
               />
             </motion.div>
           </div>
