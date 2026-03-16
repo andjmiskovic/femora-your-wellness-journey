@@ -162,7 +162,7 @@ export default function Landing() {
       </section>
 
       {/* VALUE SECTION */}
-      <section id="value-section" className="py-20 md:py-28 px-6 bg-secondary/30">
+      <section id="value-section" className="py-12 md:py-16 px-6 bg-secondary/30">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
             <motion.div
