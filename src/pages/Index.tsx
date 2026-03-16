@@ -5,9 +5,10 @@ import ConceiveDashboard from "@/components/ConceiveDashboard";
 import PregnancyDashboard from "@/components/PregnancyDashboard";
 
 const Index = () => {
-  const { mode } = useAppState();
+  const { mode, onboardingCompleted } = useAppState();
 
-  if (!mode) return <Onboarding />;
+  // Show onboarding only if user hasn't completed it
+  if (!onboardingCompleted || !mode) return <Onboarding />;
   if (mode === "cycle") return <CycleDashboard />;
   if (mode === "conceive") return <ConceiveDashboard />;
   if (mode === "pregnancy") return <PregnancyDashboard />;
