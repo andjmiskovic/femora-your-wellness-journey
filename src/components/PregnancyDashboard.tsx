@@ -14,7 +14,7 @@ const item = {
 };
 
 export default function PregnancyDashboard() {
-  const {} = useAppState();
+  const _appState = useAppState();
   const navigate = useNavigate();
   const currentWeek = 12;
 
