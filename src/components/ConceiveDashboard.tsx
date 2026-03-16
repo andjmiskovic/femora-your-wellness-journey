@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import { useAppState } from "@/context/AppContext";
 import DateStrip from "@/components/DateStrip";
 import CycleHeroCard from "@/components/CycleHeroCard";
 import DailyLog from "@/components/DailyLog";
-import { ArrowLeft, Settings, Heart, Sparkles, Bell } from "lucide-react";
+import { Settings, Heart, Sparkles, Bell } from "lucide-react";
 
 const transition = { type: "spring" as const, stiffness: 300, damping: 28 };
 const container = {
