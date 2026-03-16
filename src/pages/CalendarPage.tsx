@@ -63,7 +63,15 @@ const dotColors: Record<DayType, string> = {
   fertile: "bg-accent/60",
   ovulation: "bg-accent",
   luteal: "bg-secondary-foreground/30",
-  none: "",
+  none: "bg-border",
+};
+
+const dotColorsSelected: Record<DayType, string> = {
+  period: "bg-primary-foreground",
+  fertile: "bg-primary-foreground/70",
+  ovulation: "bg-primary-foreground",
+  luteal: "bg-primary-foreground/50",
+  none: "bg-primary-foreground/30",
 };
 
 const phaseLabels: Record<DayType, string> = {
@@ -244,13 +252,11 @@ export default function CalendarPage() {
                   `}
                 >
                   <span className="leading-none">{day}</span>
-                  {/* Phase dot */}
+                  {/* Phase dot - always visible */}
                   <div className="flex items-center gap-0.5 mt-0.5">
-                    {type !== "none" && !isSelected && (
-                      <span className={`w-1.5 h-1.5 rounded-full ${dotColors[type]}`} />
-                    )}
-                    {hasNote && !isSelected && (
-                      <span className="w-1.5 h-1.5 rounded-full bg-foreground/30" />
+                    <span className={`w-1.5 h-1.5 rounded-full ${isSelected ? dotColorsSelected[type] : dotColors[type]}`} />
+                    {hasNote && (
+                      <span className={`w-1.5 h-1.5 rounded-full ${isSelected ? "bg-primary-foreground/60" : "bg-foreground/30"}`} />
                     )}
                   </div>
                 </button>
