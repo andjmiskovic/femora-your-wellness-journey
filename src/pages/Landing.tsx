@@ -172,9 +172,9 @@ export default function Landing() {
               transition={transition}
             >
               <img
-                src={wellnessIllustration}
-                alt="Abstract female wellness illustration"
-                className="w-full max-w-sm mx-auto"
+                src={wellnessWoman}
+                alt="Woman practicing wellness and self-care"
+                className="w-full max-w-sm mx-auto rounded-3xl shadow-elevated object-cover aspect-square"
               />
             </motion.div>
             <motion.div
