@@ -15,6 +15,7 @@ const item = {
 
 export default function PregnancyDashboard() {
   const { setMode } = useAppState();
+  const navigate = useNavigate();
   const currentWeek = 12;
 
   const trimester = currentWeek <= 12 ? "First" : currentWeek <= 27 ? "Second" : "Third";
